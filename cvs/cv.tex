@@ -1,0 +1,144 @@
+%----------------------------------------------------------------------------------------
+%	DOCUMENT DEFINITION
+%----------------------------------------------------------------------------------------
+
+% article class because we want to fully customize the page and not use a cv template
+\documentclass[a4paper,12pt]{article}
+%----------------------------------------------------------------------------------------
+%	FONT
+%----------------------------------------------------------------------------------------
+% % fontspec allows you to use TTF/OTF fonts directly
+% \usepackage{fontspec}
+% \defaultfontfeatures{Ligatures=TeX}
+
+% % modified for ShareLaTeX use
+% \setmainfont[
+% SmallCapsFont = Fontin-SmallCaps.otf,
+% BoldFont = Fontin-Bold.otf,
+% ItalicFont = Fontin-Italic.otf
+% ]
+% {Fontin.otf}
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES
+%----------------------------------------------------------------------------------------
+\usepackage{url}
+\usepackage{parskip} 	
+
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9]{geometry}
+
+%tabularx environment
+\usepackage{tabularx}
+
+%for lists within experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+
+%custom \section
+\usepackage{titlesec}				
+\usepackage{multicol}
+\usepackage{multirow}
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{10pt}
+
+%for publications
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+
+%Setup hyperref package, and colours for links
+\usepackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+
+%for social icons
+\usepackage{fontawesome5}
+
+%debug page outer frames
+%\usepackage{showframe}
+
+%----------------------------------------------------------------------------------------
+%	BEGIN DOCUMENT
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+% non-numbered pages
+\pagestyle{empty} 
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+% \begin{tabularx}{\linewidth}{ @{}X X@{} }
+% \huge{Your Name}\vspace{2pt} & \hfill \emoji{incoming-envelope} email@email.com \\
+% \raisebox{-0.05\height}\faGithub\ username \ | \
+% \raisebox{-0.00\height}\faLinkedin\ username \ | \ \raisebox{-0.05\height}\faGlobe \ mysite.com  & \hfill \emoji{calling} number
+% \end{tabularx}
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\Huge{Diego Rezende Santos de Moura} \\[7.5pt]
+\href{https://diegorezm.netlify.app/}{\raisebox{-0.05\height}\faGlobe \ diegorezm.app} \ $|$ \ 
+\href{https://www.linkedin.com/in/diegorezm/}{\raisebox{-0.05\height}\faLinkedin\ diegorezm} \ $|$ \ 
+\href{https://github.com/diegorezm}{\raisebox{-0.05\height}\faGithub\ diegorezm} \ $|$ \ 
+\href{mailto:diegommrez12@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ diegommrez12@gmail.com} \
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+% EXPERIENCE SECTIONS
+%----------------------------------------------------------------------------------------
+%Interests/ Keywords/ Summary
+\section{Objetivo}
+Procurando por oportunidades para crescer profissionalmente.
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+\section{Educação}
+\begin{tabularx}{\linewidth}{@{}l X@{}}	
+2023 - 2026 & 3º período de análise e desenvolvimento de sistemas pela \textbf{UNITAU} \\ 
+2018 - 2020 & Ensino médio pela escola \textbf{IDESA} \\
+\end{tabularx}
+
+%Experience
+\section{Experiência}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Exército Brasileiro} & \hfill Mar 2022 - Jan 2023 \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+Servi o ano obrigatório na instituição, obtendo o certificado de honra ao mérito. Durante esse período, desenvolvi habilidades valiosas, incluindo:
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item[--] Experiência em serviço de guarda armada, garantindo segurança e ordem.
+        \item[--] Trabalho colaborativo em equipe, demonstrando capacidade de liderança e cooperação.
+        \item[--] Responsabilidade na operação de portaria, controlando entrada e saída de pessoas.
+    \end{itemize}
+    \end{minipage}
+}
+\end{tabularx}
+
+
+
+%----------------------------------------------------------------------------------------
+%	Certificados
+%----------------------------------------------------------------------------------------
+\section{Certificados e habilidades}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+Inglês &  \normalsize{\href{https://cert.efset.org/KdGLiQ}{Certificado de proficiência em inglês pela efset.}}\\
+Excel & \normalsize{\href{https://www.cursoemvideo.com/certificates/certificado/?course_id=25933&cert-nonce=03d3237805}{Curso de Excel realizado pelo site cursoemvideo.com}}\\  
+Html e Css  & \normalsize{Experiência em ambas as linguagens de marcação.} \\ 
+SQL & \normalsize{Experiência em gerenciamento de bancos de dados relacionais, com foco principal no PostgreSQL.} \\
+\end{tabularx}
+\vfill
+% \center{\footnotesize Last updated: \today}
+\end{document}
