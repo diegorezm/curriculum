@@ -31,8 +31,10 @@ jobs:
           working_directory: ${{ env.DIR }}
       - name: move pt cv
         run: mkdir -p github_artifacts && mv ${{ env.DIR }}/${{ env.FILE }}.pdf ./github_artifacts/
+      - name: move pt cv fullstack
+        run: mkdir -p github_artifacts && mv ${{ env.DIR }}/${{ env.FILE-FULLSTACK }}.pdf ./github_artifacts/
       - name: move en cv
-        run: mkdir -p github_artifacts && mv ${{ env.DIR }}/${{ env.FILE-ENG }}.pdf ./github_artifacts/
+        run: mkdir -p github_artifacts && mv ${{ env.DIR }}/${{ env.FILE-FULLSTACK-ENG }}.pdf ./github_artifacts/
       - name: Upload pdfs as artifact
         uses: actions/upload-artifact@v3
         with:
