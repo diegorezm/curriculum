@@ -1,5 +1,6 @@
 \documentclass[letterpaper,10pt]{article}
 
+\usepackage[T1]{fontenc}
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
@@ -12,6 +13,15 @@
 \usepackage[english]{babel}
 \usepackage{tabularx}
 \input{glyphtounicode}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+    pdfpagemode=FullScreen,
+}
+
 
 % Font options
 \usepackage[sfdefault]{roboto}  % Sans-serif font
@@ -62,29 +72,30 @@
   \href{https://github.com/diegorezm}{github.com/diegorezm}
 \end{center}
 
-\section*{Summary}
+\section*{Objective}
 Full Stack Developer seeking opportunities to grow professionally and apply my knowledge. I focus on Java for backend and TypeScript for frontend with experience in Spring Boot and Nextjs frameworks.
 
 \section{Technical Skills}
 \resumeSubHeadingList
   \resumeItem{\textbf{Programming Languages}: Java, Javascript, Python}
   \resumeItem{\textbf{Frameworks}: Spring Boot, Nextjs}
-  \resumeItem{\textbf{Libraries \& Tools}: Git, Docker, Node, React, Tailwind}
+  \resumeItem{\textbf{Libraries \& Tools}: Git, Docker, Node, React, Svelte, Tailwind}
+  \resumeItem{\textbf{Markup}: Html, Css, Markdown}
 \resumeSubHeadingListEnd
 
 \section{Projects}
 \resumeSubHeadingList
   \resumeSubheading
       {Convenience Store}{\href{https://github.com/diegorezm/convenience.store.api}{github}} 
-      {Fullstack web application}{Java, Spring Boot, Nextjs, Typescript}
+      {Fullstack Web Application}{Spring Boot, Next.js, Docker, SQL}
       \resumeSubHeadingList
-          \resumeItem{\textbullet\ Backend: Spring Boot API with SQL database}
-          \resumeItem{\textbullet\ Implementation of user interaction methods with the database}
-          \resumeItem{\textbullet\ Authentication with Spring Security}
-          \resumeItem{\textbullet\ Testing with JUnit and MockMvc}
-          \resumeItem{\textbullet\ Containerization with Docker for easy deployment}
-          \resumeItem{\textbullet\ Automation with GitHub Actions and image hosting on Docker Hub}
-          \resumeItem{\textbullet\ Frontend: developed with Nextjs and TypeScript for easy interface creation}
+          \resumeItem{\textbullet\ Backend developed with Spring Boot, integrating an SQL database.}
+          \resumeItem{\textbullet\ Implementation of CRUD (Create, Read, Update, Delete) operations for user interaction with the database, ensuring efficiency and security in access.}
+          \resumeItem{\textbullet\ Robust authentication using Spring Security, ensuring user data protection.}
+          \resumeItem{\textbullet\ Automated testing with JUnit and MockMvc to ensure application quality and stability.}
+          \resumeItem{\textbullet\ Full containerization with Docker, simplifying the deployment process and increasing application portability.}
+          \resumeItem{\textbullet\ Continuous integration and continuous delivery (CI/CD) set up with GitHub Actions, with Docker images hosted on Docker Hub, ensuring an agile and efficient development workflow.}
+          \resumeItem{\textbullet\ Frontend developed with Next.js, TypeScript, and Tailwind, providing a dynamic and responsive user interface.}
       \resumeSubHeadingListEnd
 \resumeSubHeadingListEnd
 
@@ -92,14 +103,13 @@ Full Stack Developer seeking opportunities to grow professionally and apply my k
 \resumeSubHeadingList
   \resumeSubheading
       {Soldier}{Mar 2022 -- Jan 2023}
-      {Army}{Pindamonhangaba, SP, Brazil}
+      {Brazilian Army}{Pindamonhangaba, SP}
       \resumeSubHeadingList
-          \resumeItem{\textbullet\ Armed guard service}
-          \resumeItem{\textbullet\ Teamwork experience}
-          \resumeItem{\textbullet\ Experience with entry and exit control at the gatehouse}
+          \resumeItem{\textbullet\ Responsible for armed guard duty, ensuring the security and integrity of military facilities.}
+          \resumeItem{\textbullet\ Developed teamwork skills, effectively collaborating with fellow soldiers to accomplish missions and daily tasks.}
+          \resumeItem{\textbullet\ Managed the entrance gate, including strict control of people entering and exiting, ensuring security and access control.}
       \resumeSubHeadingListEnd
 \resumeSubHeadingListEnd
-
 \section{Education}
 \resumeSubHeadingList
   \resumeSubheading

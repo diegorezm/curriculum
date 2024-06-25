@@ -1,5 +1,6 @@
 \documentclass[letterpaper,10pt]{article}
 
+\usepackage[T1]{fontenc}
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
@@ -11,7 +12,17 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
+\usepackage{hyperref}
+
 \input{glyphtounicode}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+    pdfpagemode=FullScreen,
+}
 
 % Font options
 \usepackage[sfdefault]{roboto}  % Sans-serif font
@@ -52,7 +63,6 @@
 \newcommand{\resumeSubHeadingList}{\begin{itemize}[leftmargin=0.15in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \setlength{\footskip}{5pt}
-
 \begin{document}
 
 \begin{center}
@@ -62,43 +72,8 @@
   \href{https://github.com/diegorezm}{github.com/diegorezm}
 \end{center}
 
-\section*{Sumário}
+\section*{Objetivo}
 Desenvolvedor Full Stack, procurando por oportunidades para crescer profissionalmente e colocar meus conhecimentos em prática. Tenho foco nas linguagens Java para backend e Typescript para frontend com experiência nos frameworks Spring Boot e Nextjs.
-
-\section{habilidades técnicas}
-\resumeSubHeadingList
-  \resumeItem{\textbf{Linguagens de programação}: Java, Javascript, Python}
-  \resumeItem{\textbf{Frameworks}: Spring Boot, Nextjs}
-  \resumeItem{\textbf{Libraries \& Tools}: Git, Docker, Node, React, Tailwind}
-\resumeSubHeadingListEnd
-
-\section{Projetos}
-\resumeSubHeadingList
-  \resumeSubheading
-      {Loja de conveniência}{\href{https://github.com/diegorezm/convenience.store.api}{github}} 
-      {Aplicação web fullstack}{Java, Spring Boot, Nextjs, Typescript}
-      \resumeSubHeadingList
-          \resumeItem{\textbullet\ Backend: API Spring Boot com banco de dados SQL}
-          \resumeItem{\textbullet\ Implementação de métodos de interação do usuário com o banco de dados}
-          \resumeItem{\textbullet\ Autenticação com Spring Security}
-          \resumeItem{\textbullet\ Testes utilizando JUnit e MockMvc}
-          \resumeItem{\textbullet\ Conteinerização com Docker para facilitar o deploy}
-          \resumeItem{\textbullet\ Automação com GitHub Actions e hospedagem da imagem no Docker Hub}
-          \resumeItem{\textbullet\ Frontend: desenvolvido com Nextjs e Typescript para facilitar a criação da interface}
-      \resumeSubHeadingListEnd
-\resumeSubHeadingListEnd
-
-\section{Experiência}
-\resumeSubHeadingList
-  \resumeSubheading
-      {Soldado}{Mar 2022 -- Jan 2023}
-      {Exército}{Pindamonhangaba, SP}
-      \resumeSubHeadingList
-          \resumeItem{\textbullet\ Serviço de guarda armada}
-          \resumeItem{\textbullet\ Experiência com trabalho em equipe}
-          \resumeItem{\textbullet\ Experiência com serviço em portaria, controlando entrada e saída de pessoas}
-      \resumeSubHeadingListEnd
-\resumeSubHeadingListEnd
 
 \section{Educação}
 \resumeSubHeadingList
@@ -106,6 +81,44 @@ Desenvolvedor Full Stack, procurando por oportunidades para crescer profissional
       {UNITAU}{Taubaté, SP}
       {Análise e Desenvolvimento de Sistemas} {Jan 2023 -- Dez 2025}
 \resumeSubHeadingListEnd
+
+\section{habilidades técnicas}
+\resumeSubHeadingList
+  \resumeItem{\textbf{Linguagens de programação}: Java, Javascript, Python}
+  \resumeItem{\textbf{Frameworks}: Spring Boot, Nextjs}
+  \resumeItem{\textbf{Libraries \& Tools}: Git, Docker, Node, React, Tailwind}
+   \resumeItem{\textbf{Markup}: Html, Css, Markdown}
+\resumeSubHeadingListEnd
+
+\section{Projetos}
+\resumeSubHeadingList
+  \resumeSubheading
+      {Loja de conveniência}{\href{https://github.com/diegorezm/convenience.store.api}{github}} 
+      {Aplicação web fullstack}{Spring Boot, Next.js, Docker, SQL}
+      \resumeSubHeadingList
+          \resumeItem{\textbullet\ Backend desenvolvido com Spring Boot, integrando um banco de dados SQL para armazenamento de informações.}
+          \resumeItem{\textbullet\ Implementação de CRUD (Create, Read, Update, Delete) para interação do usuário com o banco de dados, garantindo eficiência e segurança nos acessos.}
+          \resumeItem{\textbullet\ Autenticação robusta utilizando Spring Security, assegurando a proteção dos dados do usuário.}
+          \resumeItem{\textbullet\ Testes automatizados com JUnit e MockMvc para assegurar a qualidade e a estabilidade da aplicação.}
+          \resumeItem{\textbullet\ Conteinerização completa com Docker, simplificando o processo de deploy e aumentando a portabilidade da aplicação.}
+          \resumeItem{\textbullet\ Integração contínua e entrega contínua (CI/CD) configurada com GitHub Actions, com hospedagem das imagens Docker no Docker Hub, garantindo um fluxo de desenvolvimento ágil e eficiente.}
+          \resumeItem{\textbullet\ Frontend desenvolvido com Next.js,TypeScript e Tailwind, proporcionando uma interface de usuário dinâmica e responsiva.}
+      \resumeSubHeadingListEnd
+\resumeSubHeadingListEnd
+
+\section{Experiência}
+\resumeSubHeadingList
+  \resumeSubheading
+      {Soldado}{Mar 2022 -- Jan 2023}
+      {Exército Brasileiro}{Pindamonhangaba, SP}
+      \resumeSubHeadingList
+          \resumeItem{\textbullet\ Responsável pelo serviço de guarda armada, assegurando a segurança e integridade das instalações militares.}
+          \resumeItem{\textbullet\ Desenvolvimento de habilidades de trabalho em equipe, colaborando eficazmente com outros soldados para cumprir missões e tarefas diárias.}
+          \resumeItem{\textbullet\ Gerenciamento da portaria, incluindo controle rigoroso de entrada e saída de pessoas, garantindo a segurança e o controle de acesso às instalações.}
+          \resumeItem{\textbullet\ Recebimento de certificado de honra ao mérito.}
+      \resumeSubHeadingListEnd
+\resumeSubHeadingListEnd
+
 
 \section{Certificações}
 \resumeSubHeadingList
