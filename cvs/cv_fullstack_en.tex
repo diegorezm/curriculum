@@ -1,150 +1,117 @@
-%----------------------------------------------------------------------------------------
-%	DOCUMENT DEFINITION
-%----------------------------------------------------------------------------------------
+\documentclass[letterpaper,10pt]{article}
 
-% article class because we want to fully customize the page and not use a cv template
-\documentclass[a4paper,12pt]{article}
-%----------------------------------------------------------------------------------------
-%	FONT
-%----------------------------------------------------------------------------------------
-% % fontspec allows you to use TTF/OTF fonts directly
-% \usepackage{fontspec}
-% \defaultfontfeatures{Ligatures=TeX}
-
-% % modified for ShareLaTeX use
-% \setmainfont[
-% SmallCapsFont = Fontin-SmallCaps.otf,
-% BoldFont = Fontin-Bold.otf,
-% ItalicFont = Fontin-Italic.otf
-% ]
-% {Fontin.otf}
-
-%----------------------------------------------------------------------------------------
-%	PACKAGES
-%----------------------------------------------------------------------------------------
-\usepackage{url}
-\usepackage{parskip} 	
-
-%other packages for formatting
-\RequirePackage{color}
-\RequirePackage{graphicx}
-\usepackage[usenames,dvipsnames]{xcolor}
-\usepackage[scale=0.9]{geometry}
-
-%tabularx environment
-\usepackage{tabularx}
-
-%for lists within experience section
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
 \usepackage{enumitem}
-
-% centered version of 'X' col. type
-\newcolumntype{C}{>{\centering\arraybackslash}X} 
-
-%to prevent spillover of tabular into next pages
-\usepackage{supertabular}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
 \usepackage{tabularx}
-\newlength{\fullcollw}
-\setlength{\fullcollw}{0.47\textwidth}
+\input{glyphtounicode}
 
-%custom \section
-\usepackage{titlesec}				
-\usepackage{multicol}
-\usepackage{multirow}
+% Font options
+\usepackage[sfdefault]{roboto}  % Sans-serif font
 
-%CV Sections inspired by: 
-%http://stefano.italians.nl/archives/26
-\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{10pt}{10pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
 
-%for publications
-\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
 
-%Setup hyperref package, and colours for links
-\usepackage[unicode, draft=false]{hyperref}
-\definecolor{linkcolour}{rgb}{0,0.2,0.6}
-\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
 
-%for social icons
-\usepackage{fontawesome5}
+% Section formatting
+\titleformat{\section}{\Large\bfseries\scshape\raggedright}{}{0em}{}[\titlerule]
 
-%debug page outer frames
-%\usepackage{showframe}
+% Ensure PDF is machine readable
+\pdfgentounicode=1
 
-%----------------------------------------------------------------------------------------
-%	BEGIN DOCUMENT
-%----------------------------------------------------------------------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{\item\small{#1}}
+\newcommand{\resumeSubheading}[4]{
+\vspace{-1pt}\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{#3} & \textit{#4} \\
+  \end{tabular*}\vspace{-7pt}
+}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\resumeSubHeadingList}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+
 \begin{document}
 
-% non-numbered pages
-\pagestyle{empty} 
+\begin{center}
+  \textbf{\Huge Diego Rezende Santos de Moura} \\
+  \small \href{https://diegorezm.netlify.app/}{diegorezm.app} $|$ \href{mailto:diegommrez12@gmail.com}{diegommrez12@gmail.com} $|$ 
+  \href{https://linkedin.com/in/diegorezm}{linkedin.com/in/diegorezm} $|$
+  \href{https://github.com/diegorezm}{github.com/diegorezm}
+\end{center}
 
-%----------------------------------------------------------------------------------------
-%	TITLE
-%----------------------------------------------------------------------------------------
+\section*{Summary}
+Full Stack Developer seeking opportunities to grow professionally and apply my knowledge. I focus on Java for backend and TypeScript for frontend with experience in Spring Boot and Nextjs frameworks.
 
-% \begin{tabularx}{\linewidth}{ @{}X X@{} }
-% \huge{Your Name}\vspace{2pt} & \hfill \emoji{incoming-envelope} email@email.com \\
-% \raisebox{-0.05\height}\faGithub\ username \ | \
-% \raisebox{-0.00\height}\faLinkedin\ username \ | \ \raisebox{-0.05\height}\faGlobe \ mysite.com  & \hfill \emoji{calling} number
-% \end{tabularx}
+\section{Technical Skills}
+\resumeSubHeadingList
+  \resumeItem{\textbf{Programming Languages}: Java, Javascript, Python}
+  \resumeItem{\textbf{Frameworks}: Spring Boot, Nextjs}
+  \resumeItem{\textbf{Libraries \& Tools}: Git, Docker, Node, React, Tailwind}
+\resumeSubHeadingListEnd
 
-\begin{tabularx}{\linewidth}{@{} C @{}}
-\Huge{Diego Rezende Santos de Moura} \\[7.5pt]
-\href{https://diegorezm.netlify.app/}{\raisebox{-0.05\height}\faGlobe \ diegorezm.app} \ $|$ \ 
-\href{https://www.linkedin.com/in/diegorezm/}{\raisebox{-0.05\height}\faLinkedin\ diegorezm} \ $|$ \ 
-\href{https://github.com/diegorezm}{\raisebox{-0.05\height}\faGithub\ diegorezm} \ $|$ \ 
-\href{mailto:diegommrez12@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ diegommrez12@gmail.com} \
-\end{tabularx}
-
-%----------------------------------------------------------------------------------------
-% EXPERIENCE SECTIONS
-%----------------------------------------------------------------------------------------
-%Interests/ Keywords/ Summary
-\section{Summary}
-Passionate junior Fullstack developer with a strong foundation in web development. Primary focus on Typescript and Java.
-%Projects
 \section{Projects}
+\resumeSubHeadingList
+  \resumeSubheading
+      {Convenience Store}{\href{https://github.com/diegorezm/convenience.store.api}{github}} 
+      {Fullstack web application}{Java, Spring Boot, Nextjs, Typescript}
+      \resumeSubHeadingList
+          \resumeItem{\textbullet\ Backend: Spring Boot API with SQL database}
+          \resumeItem{\textbullet\ Implementation of user interaction methods with the database}
+          \resumeItem{\textbullet\ Authentication with Spring Security}
+          \resumeItem{\textbullet\ Testing with JUnit and MockMvc}
+          \resumeItem{\textbullet\ Containerization with Docker for easy deployment}
+          \resumeItem{\textbullet\ Automation with GitHub Actions and image hosting on Docker Hub}
+          \resumeItem{\textbullet\ Frontend: developed with Nextjs and TypeScript for easy interface creation}
+      \resumeSubHeadingListEnd
+\resumeSubHeadingListEnd
 
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{Convenience Store} & \hfill \href{https://github.com/diegorezm/convenience.store.api}{github} \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{University project divided into two parts: backend and frontend. The backend consists of a Spring Boot API with an SQL database, implementing methods for user interaction with the database, as well as authentication with Spring Security and testing using JUnit and MockMvc. To facilitate deployment, containerization is done with Docker, using GitHub Actions for automation and Docker Hub for hosting the image. The frontend is developed with Next.js and TypeScript to facilitate the creation of the interface} \\
-\end{tabularx}
-
-%Experience
 \section{Experience}
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{Brazilian Army} & \hfill Mar 2022 - Jan 2023 \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{
-\begin{minipage}[t]{\linewidth}
-    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
-        \item[--] Guard duty
-        \item[--] Teamwork experience
-    \end{itemize}
-    \end{minipage}
-}
-\end{tabularx}
+\resumeSubHeadingList
+  \resumeSubheading
+      {Soldier}{Mar 2022 -- Jan 2023}
+      {Army}{Pindamonhangaba, SP, Brazil}
+      \resumeSubHeadingList
+          \resumeItem{\textbullet\ Armed guard service}
+          \resumeItem{\textbullet\ Teamwork experience}
+          \resumeItem{\textbullet\ Experience with entry and exit control at the gatehouse}
+      \resumeSubHeadingListEnd
+\resumeSubHeadingListEnd
 
-%----------------------------------------------------------------------------------------
-%	EDUCATION
-%----------------------------------------------------------------------------------------
 \section{Education}
-\begin{tabularx}{\linewidth}{@{}l X@{}}	
-2023 - 2026 & 3rd period of systems analysis and development at \textbf{UNITAU} \\ 
-2018 - 2020 & High school at \textbf{IDESA} \\
-\end{tabularx}
+\resumeSubHeadingList
+  \resumeSubheading
+      {UNITAU}{Taubaté, SP, Brazil}
+      {Analysis and Systems Development} {Jan 2023 -- Dec 2025}
+\resumeSubHeadingListEnd
 
-%----------------------------------------------------------------------------------------
-%	Certificates
-%----------------------------------------------------------------------------------------
-\section{Skills \& Certifications}
-\begin{tabularx}{\linewidth}{@{}l X@{}}
-English &  \normalsize{\href{https://cert.efset.org/KdGLiQ}{Certificate of English proficiency by efset.}}\\
-Javascript and Typescript  &  \normalsize{\href{https://udemy-certificate.s3.amazonaws.com/image/UC-6fc7d4af-701d-446a-b69b-8e167018a749.jpg?v=1706800581000}{Web development course by UDEMY.}}\\  
-Data Structures and Algorithms &  \normalsize{\href{https://udemy-certificate.s3.amazonaws.com/image/UC-7074fe91-0541-4bfd-bc58-af41912a6361.jpg?v=1703254492000}{Course taken on UDEMY.}}\\  
-Excel & \normalsize{\href{https://www.cursoemvideo.com/validacao-de-certificado/?codigo=798CE-654D-9}{Excel course by cursoemvideo.com}}\\  
-Linux & \normalsize{Linux is my main operating system, i am extremly familiar with the linux CLI.}\\  
-\end{tabularx}
+\section{Certifications}
+\resumeSubHeadingList
+    \resumeItem{\textbullet\ \normalsize{\href{https://cert.efset.org/KdGLiQ}{English proficiency certificate from EF SET}}}
+    \resumeItem{\textbullet\ \normalsize{\href{https://udemy-certificate.s3.amazonaws.com/image/UC-6fc7d4af-701d-446a-b69b-8e167018a749.jpg?v=1706800581000}{JavaScript and TypeScript from basic to advanced course}}}
+    \resumeItem{\textbullet\ \normalsize{\href{https://udemy-certificate.s3.amazonaws.com/image/UC-7074fe91-0541-4bfd-bc58-af41912a6361.jpg?v=1703254492000}{Data Structures and Algorithms course}}}
+    \resumeItem{\textbullet\ \normalsize{\href{https://www.cursoemvideo.com/validacao-de-certificado/?codigo=798CE-654D-9}{Excel [40 Hours]}}}
+\resumeSubHeadingListEnd
 
-\vfill
-% \center{\footnotesize Last updated: \today}
 \end{document}
