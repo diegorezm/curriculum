@@ -17,10 +17,24 @@ jobs:
       - name: cv
         uses: dante-ev/latex-action@latest
         with:
-          root_file: .
+          root_file: ${{ env.FILE }}
+          working_directory: ${{ env.DIR }}
+      - name: cv-fullstack
+        uses: dante-ev/latex-action@latest
+        with:
+          root_file: ${{ env.FILE-FULLSTACK }}
+          working_directory: ${{ env.DIR }}
+      - name: cv-en
+        uses: dante-ev/latex-action@latest
+        with:
+          root_file: ${{ env.FILE-FULLSTACK-ENG }}
           working_directory: ${{ env.DIR }}
       - name: move pt cv
-        run: mkdir -p github_artifacts && mv ${{ env.DIR }}/*.pdf ./github_artifacts/
+        run: mkdir -p github_artifacts && mv ${{ env.DIR }}/${{ env.FILE }}.pdf ./github_artifacts/
+      - name: move pt cv fullstack
+        run: mkdir -p github_artifacts && mv ${{ env.DIR }}/${{ env.FILE-FULLSTACK }}.pdf ./github_artifacts/
+      - name: move en cv
+        run: mkdir -p github_artifacts && mv ${{ env.DIR }}/${{ env.FILE-FULLSTACK-ENG }}.pdf ./github_artifacts/
       - name: Upload pdfs as artifact
         uses: actions/upload-artifact@v3
         with:
